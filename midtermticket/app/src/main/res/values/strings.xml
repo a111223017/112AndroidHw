@@ -5,4 +5,11 @@
     <string name="regularticket">全票</string>
     <string name="childticket">兒童票</string>
     <string name="studentticket">學生票</string>
+    <string name="count">購買數量:</string>
+    <string name="Sure">確定</string>
+    <string name="return1">返回</string>
+    <string name="m500">500</string>
+    <string name="m400">400</string>
+    <string name="m250">250</string>
+    <string name="ticketform">票種:</string>
 </resources>

@@ -58,16 +58,16 @@
             android:text="@string/regularticket" />
 
         <RadioButton
-            android:id="@+id/rdbChild"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/childticket" />
-
-        <RadioButton
             android:id="@+id/rdbStudent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/studentticket" />
+
+        <RadioButton
+            android:id="@+id/rdbChild"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/childticket" />
 
     </RadioGroup>
 
@@ -78,7 +78,7 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="356dp"
 
-        android:text="選擇"
+        android:text="@string/Sure"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rgType" />
 
@@ -88,24 +88,85 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="42dp"
-        android:text="TextView"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.124"
+        app:layout_constraintHorizontal_bias="0.121"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.479" />
+        app:layout_constraintVertical_bias="0.542" />
 
     <EditText
         android:id="@+id/EdtNum"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="200dp"
-        android:layout_marginTop="64dp"
+        android:layout_width="152dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="56dp"
         android:ems="10"
         android:inputType="numberSigned"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rgType" />
+
+    <TextView
+        android:id="@+id/txcCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/count"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toStartOf="@+id/EdtNum"
+        app:layout_constraintHorizontal_bias="0.925"
+        app:layout_constraintStart_toStartOf="@+id/lblOutput"
+        app:layout_constraintTop_toBottomOf="@+id/rgType"
+        app:layout_constraintVertical_bias="0.194" />
+
+    <TextView
+        android:id="@+id/txt500"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/m500"
+        app:layout_constraintBottom_toTopOf="@+id/txcCount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.133"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.84" />
+
+    <TextView
+        android:id="@+id/txt400"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/m400"
+        app:layout_constraintBottom_toTopOf="@+id/txcCount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.328"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.84" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ticketform"
+        app:layout_constraintBottom_toTopOf="@+id/EdtNum"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.048"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.613" />
+
+    <TextView
+        android:id="@+id/txt250"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/m250"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.325" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

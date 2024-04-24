@@ -18,7 +18,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity implements TextWatcher {
-    public static String[] ticket = new  String[3];
+    public static String[] ticket = {"",""};
     public  static  String finaltxt ;
     private  int ticketCount = 0,ticketmoney = 0;
     private EditText txt;
@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity implements TextWatcher {
         RadioGroup rgtk = (RadioGroup) findViewById(R.id.rgType);
         txt = (EditText) findViewById(R.id.EdtNum);
         txt.addTextChangedListener(this);
+        ticket[0]=getResources().getString(R.string.male);
         rgtk.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -42,16 +43,16 @@ public class MainActivity extends AppCompatActivity implements TextWatcher {
                     ticket[1]=getResources().getString(R.string.regularticket);
                     ticketmoney = ticketCount * 500;
 
-                } else if (checkedId == R.id.rdbChild) {
+                } else if (checkedId == R.id.rdbStudent) {
 
 
-                    ticket[1]=getResources().getString(R.string.childticket);
+                    ticket[1]=getResources().getString(R.string.studentticket);
                     ticketmoney = ticketCount * 400;
 
                 }
                 else
                 {
-                    ticket[1]=getResources().getString(R.string.studentticket);
+                    ticket[1]=getResources().getString(R.string.childticket);
                     ticketmoney = ticketCount * 250;
                 }
                 print();
@@ -80,11 +81,24 @@ public class MainActivity extends AppCompatActivity implements TextWatcher {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                TextView output= findViewById(R.id.lblOutput);
+
+                if (ticket[1] == "")
+                {
+
+                    output.setText("尚未填完票種資料無法確認");
 
 
-                Intent intent = new Intent();
-                intent.setClass(MainActivity.this,activity_second.class);
-                startActivity(intent);
+                } else if (ticketCount==0) {
+                    output.setText("尚未填完購買數量無法確認");
+                } else
+                {
+                    Intent intent = new Intent();
+                    intent.setClass(MainActivity.this,activity_second.class);
+                    startActivity(intent);
+
+                }
+
             }
 
 
@@ -93,16 +107,10 @@ public class MainActivity extends AppCompatActivity implements TextWatcher {
     }
 
 
-    public void bt_on(View view)
-    {
 
-        Intent intent = new Intent();
-        intent.setClass(MainActivity.this,activity_second.class);
-        startActivity(intent);
-
-    }
     public  void print()
     {
+
         TextView output= findViewById(R.id.lblOutput);
         String str = "";
         str +=ticket[0]+"\n"
@@ -121,7 +129,20 @@ public class MainActivity extends AppCompatActivity implements TextWatcher {
     public void onTextChanged(CharSequence s, int start, int before, int count) {
        String str = s.toString();
        ticketCount=Integer.parseInt(str);
-       print();
+       if (  ticket[1] == getResources().getString(R.string.regularticket))
+       {
+           ticketmoney = ticketCount * 500;
+
+       } else if ( ticket[1]==getResources().getString(R.string.childticket))
+       {
+            ticketmoney = ticketCount * 250;
+       }
+       else if ( ticket[1]==getResources().getString(R.string.studentticket))
+       {
+           ticketmoney = ticketCount * 400;
+
+       }
+        print();
 
     }
 
