@@ -86,11 +86,11 @@ public class MainActivity extends AppCompatActivity implements TextWatcher {
                 if (ticket[1] == "")
                 {
 
-                    output.setText("尚未填完票種資料無法確認");
+                    output.setText(R.string.cant_ticket);
 
 
                 } else if (ticketCount==0) {
-                    output.setText("尚未填完購買數量無法確認");
+                    output.setText(R.string.cant_count);
                 } else
                 {
                     Intent intent = new Intent();
@@ -115,7 +115,7 @@ public class MainActivity extends AppCompatActivity implements TextWatcher {
         String str = "";
         str +=ticket[0]+"\n"
                 +ticket[1]+ticketCount+"張\n"
-                +"金額為"+ticketmoney+"\n";
+                +"金額為"+ticketmoney+"元\n";
         finaltxt =str;
         output.setText(str);
     }

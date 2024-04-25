@@ -12,4 +12,7 @@
     <string name="m400">400</string>
     <string name="m250">250</string>
     <string name="ticketform">票種:</string>
+    <string name="cant_ticket">尚未填完票種資料無法確認</string>
+    <string name="cant_count">尚未填完購買數量無法確認</string>
+
 </resources>
