@@ -1,9 +1,11 @@
+//A111223017 李逸晨
 package com.example.midterm_ticket;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -127,22 +129,30 @@ public class MainActivity extends AppCompatActivity implements TextWatcher {
 
     @Override
     public void onTextChanged(CharSequence s, int start, int before, int count) {
-       String str = s.toString();
-       ticketCount=Integer.parseInt(str);
-       if (  ticket[1] == getResources().getString(R.string.regularticket))
-       {
-           ticketmoney = ticketCount * 500;
 
-       } else if ( ticket[1]==getResources().getString(R.string.childticket))
-       {
+
+        String str = s.toString();
+
+        if (str.isEmpty()) {
+            ticketCount = 0;
+        } else {
+            ticketCount = Integer.parseInt(str);
+        }
+        if (  ticket[1] == getResources().getString(R.string.regularticket))
+        {
+            ticketmoney = ticketCount * 500;
+
+        } else if ( ticket[1]==getResources().getString(R.string.childticket))
+        {
             ticketmoney = ticketCount * 250;
-       }
-       else if ( ticket[1]==getResources().getString(R.string.studentticket))
-       {
-           ticketmoney = ticketCount * 400;
+        }
+        else if ( ticket[1]==getResources().getString(R.string.studentticket))
+        {
+            ticketmoney = ticketCount * 400;
 
-       }
+        }
         print();
+
 
     }
 

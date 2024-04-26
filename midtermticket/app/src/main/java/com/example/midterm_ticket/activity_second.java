@@ -13,7 +13,7 @@ public class activity_second extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
         TextView Txt =findViewById(R.id.txv);
-        Txt.setText(MainActivity.finaltxt);
+        Txt.setText("已購買:\n"+MainActivity.finaltxt);
     }
     public  void btn_onclick(View view)
     {
