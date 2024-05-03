@@ -1,18 +1,24 @@
 <resources>
     <string name="app_name">midterm-ticket</string>
-    <string name="male">男生</string>
-    <string name="female">女生</string>
-    <string name="regularticket">全票</string>
-    <string name="childticket">兒童票</string>
-    <string name="studentticket">學生票</string>
-    <string name="count">購買數量:</string>
-    <string name="Sure">確定</string>
-    <string name="return1">返回</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="regularticket">Regular Ticket</string>
+    <string name="childticket">Child Ticket</string>
+    <string name="studentticket">Student Ticket</string>
+    <string name="count">Quantity:</string>
+    <string name="Sure">Confirm</string>
+    <string name="return1">Return</string>
     <string name="m500">500</string>
     <string name="m400">400</string>
     <string name="m250">250</string>
-    <string name="ticketform">票種:</string>
-    <string name="cant_ticket">尚未填完票種資料無法確認</string>
-    <string name="cant_count">尚未填完購買數量無法確認</string>
+    <string name="ticketform">Ticket Type:</string>
+    <string name="cant_ticket">Cannot confirm without completing ticket type information</string>
+    <string name="cant_count">Cannot confirm without completing quantity</string>
+    <string name="pictures">pictures</string>
+    <string name="amount">amount</string>
+
+
+
+
 
 </resources>

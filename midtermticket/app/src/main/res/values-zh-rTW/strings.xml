@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">midterm-ticket</string>
+    <string name="male">男生</string>
+    <string name="female">女生</string>
+    <string name="regularticket">成人票</string>
+    <string name="childticket">兒童票</string>
+    <string name="studentticket">學生票</string>
+    <string name="count">票數:</string>
+    <string name="Sure">確認</string>
+    <string name="return1">返回</string>
+    <string name="m500">500</string>
+    <string name="m400">400</string>
+    <string name="m250">250</string>
+    <string name="ticketform">票數種類</string>
+    <string name="cant_ticket">尚未填完票種資料無法確認</string>
+    <string name="cant_count">尚未填完購買數量無法確認</string>
+    <string name="pictures">張</string>
+    <string name="amount">已購買</string>
+
+</resources>

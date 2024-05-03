@@ -116,8 +116,8 @@ public class MainActivity extends AppCompatActivity implements TextWatcher {
         TextView output= findViewById(R.id.lblOutput);
         String str = "";
         str +=ticket[0]+"\n"
-                +ticket[1]+ticketCount+"張\n"
-                +"金額為"+ticketmoney+"元\n";
+                +ticket[1]+ticketCount+R.string.pictures+"\n"
+                +(R.string.amount)+ticketmoney+"$$\n";
         finaltxt =str;
         output.setText(str);
     }
