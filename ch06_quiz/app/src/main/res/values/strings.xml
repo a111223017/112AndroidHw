@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ch06_quiz</string>
+    <string name="bur">漢堡</string>
+    <string name="coffee">咖啡</string>
+    <string name="frenchfry">薯條</string>
+    <string name="softdrink">飲料</string>
+    <string name="soup">湯</string>
+</resources>
