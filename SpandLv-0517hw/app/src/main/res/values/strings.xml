@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">SpandLv-0517hw</string>
+    <string-array name="mainfood">
+        <item>主餐</item>
+        <item>附餐</item>
+        <item>飲料</item>
+
+    </string-array>
+    <string-array name="food1">
+        <item>牛肉漢堡</item>
+        <item>豬肉漢堡</item>
+        <item>雞肉漢堡</item>
+        <item>羊肉漢堡</item>
+
+    </string-array>
+    <string-array name="food2">
+        <item>辣味薯條</item>
+        <item>胡椒炸機</item>
+        <item>辣辣羊排</item>
+        <item>沙拉</item>
+
+    </string-array>
+    <string-array name="food3">
+        <item>可樂</item>
+        <item>紅茶</item>
+        <item>綠茶</item>
+        <item>奶茶</item>
+
+    </string-array>
+</resources>
