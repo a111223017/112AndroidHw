@@ -1,6 +1,7 @@
 package com.example.spandlv_0517hw;
 
 import android.content.Intent;
+import android.icu.util.Output;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -14,7 +15,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
+///A111223017 李逸晨
 public class MainActivity extends AppCompatActivity {
     private  String[] m_food,foods;
     private  String[] mg={" "," "," "};
@@ -125,20 +126,32 @@ public class MainActivity extends AppCompatActivity {
         int itemId = item.getItemId();
         if(itemId ==R.id.to1)
         {
-            Intent intent = new Intent();
-            intent.setClass(MainActivity.this, Acivity_2.class);
-            startActivity(intent);
+            TextView output = findViewById(R.id.txv);
+            if (mg[0]=="主餐:" || mg[1]=="附餐:"||mg[2]=="飲料:"
+            ||mg[0]==" " || mg[1]==" "||mg[2]==" ")
+            {
+                output.setText("未選擇餐點無法送出");
+
+            }
+            else {
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this, Acivity_2.class);
+                startActivity(intent);
+            }
 
         }
         else if (itemId == R.id.to2)
         {
 
                 TextView output = findViewById(R.id.txv);
-                output.setText(" ");
+                mg[0]="主餐:";
+                output.setText("主餐:");
                 TextView output1 = findViewById(R.id.txvv);
-                output1.setText(" ");
+                mg[1]="附餐:";
+                output1.setText("附餐:");
                 TextView output2 = findViewById(R.id.txv3);
-                output2.setText(" ");
+                 mg[2]="飲料:";
+                output2.setText("飲料:");
 
 
 

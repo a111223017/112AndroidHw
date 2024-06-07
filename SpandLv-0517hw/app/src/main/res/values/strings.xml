@@ -27,4 +27,7 @@
         <item>奶茶</item>
 
     </string-array>
+    <string name="mainf">主餐:</string>
+    <string name="food2">附餐</string>
+    <string name="drink">飲料:</string>
 </resources>
